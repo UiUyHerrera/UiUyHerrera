@@ -1,7 +1,7 @@
 # 💫 About Me:
-Hi, I'm Luciano!<br><br>💻 Software Developer focused on programming, automation, and development<br>🤖 Building Discord bots, tools, and custom systems<br>🎮 Interested in gaming and game-related projects<br>🛠️ Constantly learning and experimenting with new technologies<br>🚀 Building, improving, and sharing my projects
+Hi, I'm Luciano!<br><br>💻 Software Developer focused on programming, automation, and development<br>🤖 Building Discord bots, tools, and custom systems<br>🎮 Interested in gaming and game-related projects<br>🛠️ Constantly learning and experimenting with new technologies<br>🚀 Building, improving, and sharing my projects <br>
 Current i are owner of 2 Ecommerces:
-https://lifegood.cl/
+https://lifegood.cl/<br>
 https://aimgearz.cl/
 
 
