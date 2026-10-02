@@ -14,7 +14,9 @@ Desarrollador de software enfocado en crear herramientas, automatizaciones y sol
 
 ## Lenguajes y tecnologías
 
-**Lenguajes:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript · HTML
+**Lenguajes:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript
+
+**Web:** HTML
 
 **Herramientas y plataformas:** Express · Spring · Firebase · PostgreSQL · Prisma · Docker · Discord.js · Shopify Liquid
 
@@ -42,7 +44,9 @@ Software developer focused on building tools, automation, and end-to-end digital
 
 ### Languages and technologies
 
-**Languages:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript · HTML
+**Languages:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript
+
+**Web:** HTML
 
 **Tools and platforms:** Express · Spring · Firebase · PostgreSQL · Prisma · Docker · Discord.js · Shopify Liquid
 
