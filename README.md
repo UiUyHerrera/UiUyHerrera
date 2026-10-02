@@ -1,21 +1,57 @@
-# 💫 About Me:
-Hi, I'm Luciano!<br><br>💻 Software Developer focused on programming, automation, and development<br>🤖 Building Discord bots, tools, and custom systems<br>🎮 Interested in gaming and game-related projects<br>🛠️ Constantly learning and experimenting with new technologies<br>🚀 Building, improving, and sharing my projects <br>
-Current i are owner of 2 Ecommerces:
-<br>https://lifegood.cl/<br>
-https://aimgearz.cl/
+# Hola, soy luchohrrx 👋
 
+Desarrollador de software enfocado en crear herramientas, automatizaciones y soluciones digitales de principio a fin. Disfruto construir proyectos para comunidades, videojuegos y comercio electrónico, y seguir aprendiendo con cada uno.
 
-## 🌐 Socials:
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/_uiuy) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/) 
+[English version](#english)
 
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)  ![Apache Groovy](https://img.shields.io/badge/Apache%20Groovy-4298B8.svg?style=for-the-badge&logo=Apache+Groovy&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=UiUyHerrera&theme=dark&hide_border=true&include_all_commits=false&count_private=false)<br/>
-![](https://streak-stats.demolab.com/?user=UiUyHerrera&theme=dark&hide_border=true)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=UiUyHerrera&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
+## Proyectos destacados
 
----
-[![](https://komarev.com/ghpvc/?username=UiUyHerrera&icon=0&color=0)](https://visitcount.itsvg.in)
+- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — aplicación de escritorio para Windows que administra actividades personalizadas de Discord.
+- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — API para productos, usuarios, carritos y pedidos con Node.js, TypeScript y PostgreSQL.
+- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — configuración y contenido compartido para un servidor de Minecraft con Cobblemon.
+- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — skins y capas organizadas para la comunidad TikiTiki.
+- También trabajo en proyectos privados de Discord y Shopify.
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## Lenguajes y tecnologías
+
+**Lenguajes:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript · HTML
+
+**Herramientas y plataformas:** Express · Spring · Firebase · PostgreSQL · Prisma · Docker · Discord.js · Shopify Liquid
+
+## Más sobre mí
+
+- Desarrollo bots de Discord, aplicaciones de escritorio, APIs y herramientas de automatización.
+- Me interesan los videojuegos, las comunidades online y las soluciones de e-commerce.
+- Soy propietario de [LifeGood](https://lifegood.cl/) y [AimGearz](https://aimgearz.cl/).
+
+## Contacto
+
+[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/_uiuy) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
+
+## English
+
+Software developer focused on building tools, automation, and end-to-end digital solutions. I enjoy creating projects for communities, gaming, and e-commerce, and learning something new with every build.
+
+### Featured projects
+
+- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — a Windows desktop app for managing custom Discord activities.
+- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — an API for products, users, carts, and orders built with Node.js, TypeScript, and PostgreSQL.
+- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — shared configuration and content for a Cobblemon Minecraft server.
+- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — organized player skins and capes for the TikiTiki community.
+- I also work on private Discord and Shopify projects.
+
+### Languages and technologies
+
+**Languages:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript · HTML
+
+**Tools and platforms:** Express · Spring · Firebase · PostgreSQL · Prisma · Docker · Discord.js · Shopify Liquid
+
+### About me
+
+- I build Discord bots, desktop apps, APIs, and automation tools.
+- I'm interested in gaming, online communities, and e-commerce solutions.
+- I own [LifeGood](https://lifegood.cl/) and [AimGearz](https://aimgearz.cl/).
+
+### Contact
+
+[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/_uiuy) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
