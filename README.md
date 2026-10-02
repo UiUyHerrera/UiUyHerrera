@@ -1,65 +1,59 @@
+<div align="center">
+
 # Hola, soy luchohrrx 👋
+### Desarrollador de software · Automatización · Discord · E-commerce
 
-Desarrollador de software enfocado en crear herramientas, automatizaciones y soluciones digitales. Estos son algunos proyectos en los que trabajo, desde aplicaciones para Discord hasta herramientas para comunidades de Minecraft y e-commerce.
+[![Discord](https://img.shields.io/badge/Discord-Agregarme-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Contactar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
 
-[English version](#english)
+</div>
 
-## Proyectos destacados
+Desarrollo herramientas para comunidades online, videojuegos y comercio electrónico. Explora mis proyectos y las tecnologías con las que trabajo.
 
-### Públicos
+## 🧰 Lenguajes y tecnologías
 
-- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — app para Windows que crea y rota actividades personalizadas de Discord. **Python · HTML · CSS · JavaScript**
-- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — API con autenticación, productos, carrito y pedidos. **Node.js · TypeScript · Express · PostgreSQL · Prisma · Docker**
-- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — configuración y contenido para el launcher de un servidor Cobblemon. **JSON · Minecraft · Fabric**
-- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — skins y capas organizadas para la comunidad TikiTiki.
+**Lenguajes**  
+![Lenguajes](https://skillicons.dev/icons?i=c,cpp,dart,java,js,lua,php,python,ts) ![Groovy](https://img.shields.io/badge/Groovy-4298B8?style=for-the-badge&logo=apachegroovy&logoColor=white)
 
-### Proyectos privados
+**Web y herramientas**  
+![Stack](https://skillicons.dev/icons?i=html,css,nodejs,express,spring,firebase,postgres,prisma,docker)
 
-- **Discord Ticketing Bot** — bot de soporte con tickets, transcripciones, permisos por canal y editor de temas. **JavaScript · discord.js · SQLite**
-- **Shopify Storefront Theme** — tema personalizado con Liquid, secciones, bloques y plantillas para Shopify.
+## 🚀 Proyectos destacados
 
-## Lenguajes y tecnologías
+<table>
+<tr><td><a href="https://github.com/UiUyHerrera/discord-rich-presence-desktop"><img src="https://github-readme-stats.vercel.app/api/pin/?username=UiUyHerrera&repo=discord-rich-presence-desktop&theme=tokyonight&hide_border=true" alt="Discord Rich Presence Desktop" /></a><br />Actividades personalizadas de Discord para Windows · Python</td>
+<td><a href="https://github.com/UiUyHerrera/ecommerce-rest-api"><img src="https://github-readme-stats.vercel.app/api/pin/?username=UiUyHerrera&repo=ecommerce-rest-api&theme=tokyonight&hide_border=true" alt="E-commerce REST API" /></a><br />API de comercio electrónico · TypeScript · PostgreSQL</td></tr>
+<tr><td><a href="https://github.com/UiUyHerrera/tikitiki-server-config"><img src="https://github-readme-stats.vercel.app/api/pin/?username=UiUyHerrera&repo=tikitiki-server-config&theme=tokyonight&hide_border=true" alt="TikiTiki Server Configuration" /></a><br />Configuración del launcher TikiTiki/Cobblemon · JSON</td>
+<td><a href="https://github.com/UiUyHerrera/tikitiki-player-skins"><img src="https://github-readme-stats.vercel.app/api/pin/?username=UiUyHerrera&repo=tikitiki-player-skins&theme=tokyonight&hide_border=true" alt="TikiTiki Player Skins" /></a><br />Skins y capas para Minecraft</td></tr>
+</table>
 
-**Lenguajes:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript  
-**Web:** HTML · CSS · Shopify Liquid  
-**Herramientas y plataformas:** Node.js · Express · Spring · Firebase · PostgreSQL · Prisma · SQLite · Docker · Discord.js · Minecraft · Fabric
+### 🔒 Proyectos privados
+- **Discord Ticketing Bot:** tickets, transcripciones y editor de temas · JavaScript · SQLite
+- **Shopify Storefront Theme:** tema personalizado construido con Liquid
 
-## Sobre mí
+## 📊 GitHub en números
+<div align="center">
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=UiUyHerrera&show_icons=true&theme=tokyonight&hide_border=true" alt="Estadísticas de GitHub" /> <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=UiUyHerrera&layout=compact&theme=tokyonight&hide_border=true" alt="Lenguajes más usados" />
+</div>
 
-Creo bots de Discord, aplicaciones de escritorio, APIs y herramientas para comunidades. También soy propietario de [LifeGood](https://lifegood.cl/) y [AimGearz](https://aimgearz.cl/).
+## 👋 Sobre mí
+También soy propietario de [LifeGood](https://lifegood.cl/) y [AimGearz](https://aimgearz.cl/). Me interesan los videojuegos y crear soluciones prácticas para personas y negocios.
 
-## Contacto
-
-[![Agregarme en Discord](https://img.shields.io/badge/Discord-Agregarme-5865F2?logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
+---
 
 ## English
 
-Software developer focused on tools, automation, and digital products. Here are projects I build for Discord communities, Minecraft, and e-commerce.
+Software developer building tools for online communities, gaming, and e-commerce.
 
 ### Featured projects
+- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — custom Discord activities for Windows · Python
+- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — e-commerce API · TypeScript · PostgreSQL
+- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — launcher configuration for TikiTiki/Cobblemon · JSON
+- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — Minecraft skins and capes
 
-#### Public
+### Private projects
+- **Discord Ticketing Bot:** support tickets, transcripts, and theme editor · JavaScript · SQLite
+- **Shopify Storefront Theme:** custom Shopify theme built with Liquid
 
-- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — a Windows app for creating and rotating custom Discord activities. **Python · HTML · CSS · JavaScript**
-- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — an API with authentication, products, carts, and orders. **Node.js · TypeScript · Express · PostgreSQL · Prisma · Docker**
-- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — launcher configuration and content for a Cobblemon server. **JSON · Minecraft · Fabric**
-- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — organized skins and capes for the TikiTiki community.
+I also own [LifeGood](https://lifegood.cl/) and [AimGearz](https://aimgearz.cl/).
 
-#### Private projects
-
-- **Discord Ticketing Bot** — a support bot with ticket workflows, transcripts, channel permissions, and a theme editor. **JavaScript · discord.js · SQLite**
-- **Shopify Storefront Theme** — a custom Shopify theme with Liquid, reusable sections, blocks, and templates.
-
-### Languages and technologies
-
-**Languages:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript  
-**Web:** HTML · CSS · Shopify Liquid  
-**Tools and platforms:** Node.js · Express · Spring · Firebase · PostgreSQL · Prisma · SQLite · Docker · Discord.js · Minecraft · Fabric
-
-### About me
-
-I build Discord bots, desktop apps, APIs, and tools for online communities. I also own [LifeGood](https://lifegood.cl/) and [AimGearz](https://aimgearz.cl/).
-
-### Contact
-
-[![Add me on Discord](https://img.shields.io/badge/Discord-Add_me-5865F2?logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
+[![Add me on Discord](https://img.shields.io/badge/Discord-Add_me-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Contact-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
