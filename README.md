@@ -1,53 +1,65 @@
 # Hola, soy luchohrrx 👋
 
-Desarrollador de software enfocado en herramientas, automatización y soluciones digitales. Me gusta crear proyectos para comunidades, videojuegos y comercio electrónico, y aprender con cada desarrollo.
+Desarrollador de software enfocado en crear herramientas, automatizaciones y soluciones digitales. Estos son algunos proyectos en los que trabajo, desde aplicaciones para Discord hasta herramientas para comunidades de Minecraft y e-commerce.
 
 [English version](#english)
 
 ## Proyectos destacados
 
-- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — aplicación de escritorio para Windows con actividades personalizadas de Discord.
-- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — API de comercio electrónico con Node.js, TypeScript y PostgreSQL.
-- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — contenido y configuración de un servidor de Minecraft con Cobblemon.
-- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — skins y capas para la comunidad TikiTiki.
-- También trabajo en proyectos privados de Discord y Shopify.
+### Públicos
+
+- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — app para Windows que crea y rota actividades personalizadas de Discord. **Python · HTML · CSS · JavaScript**
+- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — API con autenticación, productos, carrito y pedidos. **Node.js · TypeScript · Express · PostgreSQL · Prisma · Docker**
+- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — configuración y contenido para el launcher de un servidor Cobblemon. **JSON · Minecraft · Fabric**
+- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — skins y capas organizadas para la comunidad TikiTiki.
+
+### Proyectos privados
+
+- **Discord Ticketing Bot** — bot de soporte con tickets, transcripciones, permisos por canal y editor de temas. **JavaScript · discord.js · SQLite**
+- **Shopify Storefront Theme** — tema personalizado con Liquid, secciones, bloques y plantillas para Shopify.
 
 ## Lenguajes y tecnologías
 
 **Lenguajes:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript  
-**Web:** HTML  
-**Herramientas:** Express · Spring · Firebase · PostgreSQL · Prisma · Docker · Discord.js · Shopify Liquid
+**Web:** HTML · CSS · Shopify Liquid  
+**Herramientas y plataformas:** Node.js · Express · Spring · Firebase · PostgreSQL · Prisma · SQLite · Docker · Discord.js · Minecraft · Fabric
 
 ## Sobre mí
 
-Desarrollo bots de Discord, aplicaciones de escritorio, APIs y herramientas de automatización. Me interesan los videojuegos, las comunidades online y el comercio electrónico. Soy propietario de [LifeGood](https://lifegood.cl/) y [AimGearz](https://aimgearz.cl/).
+Creo bots de Discord, aplicaciones de escritorio, APIs y herramientas para comunidades. También soy propietario de [LifeGood](https://lifegood.cl/) y [AimGearz](https://aimgearz.cl/).
 
 ## Contacto
 
-[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
+[![Agregarme en Discord](https://img.shields.io/badge/Discord-Agregarme-5865F2?logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
 
 ## English
 
-Software developer focused on tools, automation, and digital solutions. I enjoy building projects for communities, gaming, and e-commerce, and learning with every project.
+Software developer focused on tools, automation, and digital products. Here are projects I build for Discord communities, Minecraft, and e-commerce.
 
 ### Featured projects
 
-- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — a Windows desktop app for custom Discord activities.
-- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — an e-commerce API built with Node.js, TypeScript, and PostgreSQL.
-- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — content and configuration for a Cobblemon Minecraft server.
-- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — skins and capes for the TikiTiki community.
-- I also work on private Discord and Shopify projects.
+#### Public
+
+- [Discord Rich Presence Desktop](https://github.com/UiUyHerrera/discord-rich-presence-desktop) — a Windows app for creating and rotating custom Discord activities. **Python · HTML · CSS · JavaScript**
+- [E-commerce REST API](https://github.com/UiUyHerrera/ecommerce-rest-api) — an API with authentication, products, carts, and orders. **Node.js · TypeScript · Express · PostgreSQL · Prisma · Docker**
+- [TikiTiki Server Configuration](https://github.com/UiUyHerrera/tikitiki-server-config) — launcher configuration and content for a Cobblemon server. **JSON · Minecraft · Fabric**
+- [TikiTiki Player Skins](https://github.com/UiUyHerrera/tikitiki-player-skins) — organized skins and capes for the TikiTiki community.
+
+#### Private projects
+
+- **Discord Ticketing Bot** — a support bot with ticket workflows, transcripts, channel permissions, and a theme editor. **JavaScript · discord.js · SQLite**
+- **Shopify Storefront Theme** — a custom Shopify theme with Liquid, reusable sections, blocks, and templates.
 
 ### Languages and technologies
 
 **Languages:** C · C++ · Dart · Groovy · Java · JavaScript · Lua · PHP · Python · TypeScript  
-**Web:** HTML  
-**Tools:** Express · Spring · Firebase · PostgreSQL · Prisma · Docker · Discord.js · Shopify Liquid
+**Web:** HTML · CSS · Shopify Liquid  
+**Tools and platforms:** Node.js · Express · Spring · Firebase · PostgreSQL · Prisma · SQLite · Docker · Discord.js · Minecraft · Fabric
 
 ### About me
 
-I build Discord bots, desktop apps, APIs, and automation tools. I'm interested in gaming, online communities, and e-commerce. I own [LifeGood](https://lifegood.cl/) and [AimGearz](https://aimgearz.cl/).
+I build Discord bots, desktop apps, APIs, and tools for online communities. I also own [LifeGood](https://lifegood.cl/) and [AimGearz](https://aimgearz.cl/).
 
 ### Contact
 
-[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
+[![Add me on Discord](https://img.shields.io/badge/Discord-Add_me-5865F2?logo=discord&logoColor=white)](https://discord.com/users/1478159403931926749) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-herrera-b71212416/)
