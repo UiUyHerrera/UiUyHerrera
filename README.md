@@ -114,5 +114,5 @@ I also own [LifeGood](https://lifegood.cl/) and [AimGearz](https://aimgearz.cl/)
 <div align="center">
 <a href="https://discord.com/users/1478159403931926749" title="Discord: xensuy"><img src="https://cdn.simpleicons.org/discord/FFFFFF" alt="Discord" width="24" height="24" style="background-color:#5865F2;border-radius:50%;padding:10px" /></a>
 &nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/luciano-herrera-b71212416/" title="LinkedIn"><img src="https://cdn.simpleicons.org/linkedin/FFFFFF" alt="LinkedIn" width="24" height="24" style="background-color:#0A66C2;border-radius:50%;padding:10px" /></a>
+<a href="https://www.linkedin.com/in/luciano-herrera-b71212416/" title="LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" /></a>
 </div>
