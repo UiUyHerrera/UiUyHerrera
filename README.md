@@ -16,8 +16,13 @@ Estudiante de Ingeniería en Computación en la FING (UdelaR) y egresado del Bac
 
 ### Herramientas que domino
 
-- **Claude, ChatGPT y Gemini**: desarrollo con agentes de código, automatización de tareas y generación de imágenes y contenido.
+<img src="assets/herramientas.png" height="48" alt="Claude, Google Labs, Figma, Shopify, Ollama">
+
+- **Claude**: desarrollo con agentes de código, automatización de tareas y revisión de código.
+- **Google Labs**: Gemini, Flow y NotebookLM para investigar, generar imágenes y video, y resumir documentación.
+- **Figma**: diseño de interfaces y prototipos antes de programarlos.
 - **Shopify y Liquid**: edición de temas, secciones a medida y publicación con Shopify CLI.
+- **Ollama**: modelos de IA corriendo en local.
 - **Python**: scripts de automatización y bots.
 - **MySQL**: diseño de tablas y consultas para backends en PHP.
 - **Git y GitHub**: control de versiones y publicación de releases.
