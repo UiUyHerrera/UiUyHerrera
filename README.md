@@ -6,9 +6,13 @@
 
 Estudiante de Ingeniería en Computación en la FING (UdelaR) y egresado del Bachillerato en Informática de UTU. Empecé con desarrollo web (HTML, CSS, JavaScript y PHP con MySQL), después sumé Python para automatizaciones y C++ para programación de bajo nivel. También armo tiendas en Shopify con Liquid y domino herramientas de IA como Claude para desarrollar y automatizar. Tengo experiencia en soporte técnico y busco mi primer trabajo, remoto o en Uruguay.
 
-### Lenguajes
+### Lenguajes de programación
 
-<img src="https://skillicons.dev/icons?i=python,js,php,java,cpp,html,css" alt="Python, JavaScript, PHP, Java, C++, HTML, CSS">
+<img src="https://skillicons.dev/icons?i=python,js,php,java,cpp" alt="Python, JavaScript, PHP, Java, C++">
+
+### Maquetación web
+
+<img src="https://skillicons.dev/icons?i=html,css" alt="HTML, CSS">
 
 ### Frameworks y herramientas
 
