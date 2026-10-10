@@ -1,37 +1,28 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0d1117,100:1f6feb&text=Luciano%20Herrera&fontColor=ffffff&fontSize=44&fontAlignY=36&desc=Desarrollador%20junior%20%C2%B7%20Uruguay&descAlignY=58&descSize=16" width="100%" alt="Luciano Herrera, desarrollador junior">
+
 <img src="assets/terminal.svg" width="100%" alt="Bienvenido, Welcome, Hola, soy Luciano">
 
-### Luciano Herrera
+### Sobre mí
 
-**Desarrollador junior** · Canelones, Uruguay · Disponible para trabajo remoto
+Estudiante de Ingeniería en Computación en la FING (UdelaR) y egresado del Bachillerato en Informática de UTU. Empecé con desarrollo web (HTML, CSS, JavaScript y PHP con MySQL), después sumé Python para automatizaciones y C++ para programación de bajo nivel. También armo tiendas en Shopify con Liquid y uso herramientas de IA como Claude a diario para desarrollar más rápido. Tengo experiencia en soporte técnico y busco mi primer trabajo, remoto o en Uruguay.
 
-Estudiante de Ingeniería en Computación en la Facultad de Ingeniería (UdelaR) y egresado del Bachillerato en Informática de UTU. Programo en Python, Java y JavaScript, y tengo experiencia en soporte técnico.
+### Lenguajes
 
-*Junior developer from Uruguay, studying Computer Engineering. Open to remote work.*
+<img src="https://skillicons.dev/icons?i=python,js,php,java,cpp,html,css" alt="Python, JavaScript, PHP, Java, C++, HTML, CSS">
 
-[LinkedIn](https://www.linkedin.com/in/luciano-herrera-b71212416/) · [bu3luciano@gmail.com](mailto:bu3luciano@gmail.com)
+### Frameworks y herramientas
 
-### Tecnologías
+<img src="https://skillicons.dev/icons?i=mysql,postgres,nodejs,react,git,github,vscode" alt="MySQL, PostgreSQL, Node.js, React, Git, GitHub, VS Code">
 
-| Área | Tecnologías |
-|---|---|
-| **Lenguajes** | Python, Java, JavaScript |
-| **Web** | HTML, CSS |
-| **Bases de datos** | SQL (MySQL, PostgreSQL) |
-| **Herramientas** | Git, GitHub |
-| **Conociendo** | C++, Node.js, React, TypeScript |
+También: Shopify Liquid · automatizaciones con Python · desarrollo asistido con IA (Claude, ChatGPT)
 
 ### Proyectos de aprendizaje
 
-Proyectos que armé para practicar desarrollo web de punta a punta, desde la interfaz hasta la base de datos.
+| Proyecto | Qué hace |
+|---|---|
+| [Reservini](https://github.com/UiUyHerrera/reservini) | App de reservas para negocios chicos, con agenda pública. |
+| [ecommerce-rest-api](https://github.com/UiUyHerrera/ecommerce-rest-api) | API de tienda online con usuarios, productos y pedidos. |
+| [discord-ticketing-bot](https://github.com/UiUyHerrera/discord-ticketing-bot) | Bot de tickets de soporte para Discord. |
+| [mpeasy](https://github.com/UiUyHerrera/yt-mp4) | Extensión para descargar videos, con actualización automática. |
 
-| Proyecto | Qué hace | Tecnologías |
-|---|---|---|
-| [Reservini](https://github.com/UiUyHerrera/reservini) | App de reservas para negocios chicos, con agenda pública y editor de horarios. | Python, Flask |
-| [ecommerce-rest-api](https://github.com/UiUyHerrera/ecommerce-rest-api) | API de tienda online con usuarios, productos, pedidos y control de stock. | Node.js, TypeScript, PostgreSQL |
-| [discord-ticketing-bot](https://github.com/UiUyHerrera/discord-ticketing-bot) | Bot de tickets de soporte para servidores de Discord. | JavaScript, Node.js, SQLite |
-| [mpeasy](https://github.com/UiUyHerrera/yt-mp4) | Extensión de navegador para descargar videos, con actualización automática. | JavaScript, Python |
-
-### Ahora
-
-- Cursando primer año de Ingeniería en Computación (FING, UdelaR).
-- Buscando mi primer trabajo como desarrollador o en soporte técnico.
+[LinkedIn](https://www.linkedin.com/in/luciano-herrera-b71212416/) · [bu3luciano@gmail.com](mailto:bu3luciano@gmail.com)
