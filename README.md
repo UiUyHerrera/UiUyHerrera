@@ -4,7 +4,7 @@
 
 ### Sobre mí
 
-Estudiante de Ingeniería en Computación en la FING (UdelaR) y egresado del Bachillerato en Informática de UTU. Empecé con desarrollo web (HTML, CSS, JavaScript y PHP con MySQL), después sumé Python para automatizaciones y C++ para programación de bajo nivel. También armo tiendas en Shopify con Liquid y uso herramientas de IA como Claude a diario para desarrollar más rápido. Tengo experiencia en soporte técnico y busco mi primer trabajo, remoto o en Uruguay.
+Estudiante de Ingeniería en Computación en la FING (UdelaR) y egresado del Bachillerato en Informática de UTU. Empecé con desarrollo web (HTML, CSS, JavaScript y PHP con MySQL), después sumé Python para automatizaciones y C++ para programación de bajo nivel. También armo tiendas en Shopify con Liquid y domino herramientas de IA como Claude para desarrollar y automatizar. Tengo experiencia en soporte técnico y busco mi primer trabajo, remoto o en Uruguay.
 
 ### Lenguajes
 
@@ -14,7 +14,13 @@ Estudiante de Ingeniería en Computación en la FING (UdelaR) y egresado del Bac
 
 <img src="https://skillicons.dev/icons?i=mysql,postgres,nodejs,react,git,github,vscode" alt="MySQL, PostgreSQL, Node.js, React, Git, GitHub, VS Code">
 
-También: Shopify Liquid · automatizaciones con Python · desarrollo asistido con IA (Claude, ChatGPT)
+### Herramientas que domino
+
+- **Claude, ChatGPT y Gemini**: desarrollo con agentes de código, automatización de tareas y generación de imágenes y contenido.
+- **Shopify y Liquid**: edición de temas, secciones a medida y publicación con Shopify CLI.
+- **Python**: scripts de automatización y bots.
+- **MySQL**: diseño de tablas y consultas para backends en PHP.
+- **Git y GitHub**: control de versiones y publicación de releases.
 
 ### Proyectos de aprendizaje
 
