@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 132" width="760" height="132" role="img" aria-label="print Bienvenido, Welcome, Hola, soy Luciano">
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;font-size:22px}
+.tag{font-size:13px;fill:#7d8590;letter-spacing:.5px}
+.prompt{fill:#3fb950}
+.blink{animation:blink 1s infinite step-end}
+@keyframes blink{50%{opacity:0}}
+@keyframes clip0{0.000%{transform:scaleX(0.0000);animation-timing-function:steps(19,end);}9.852%{transform:scaleX(1.0000);animation-timing-function:step-end;}26.667%{transform:scaleX(1.0000);animation-timing-function:steps(19,end);}29.481%{transform:scaleX(0.0000);animation-timing-function:step-end;}100.000%{transform:scaleX(0.0000);animation-timing-function:step-end;}}
+@keyframes cursor0{0.000%{transform:translateX(0.0px);animation-timing-function:steps(19,end);}9.852%{transform:translateX(250.8px);animation-timing-function:step-end;}26.667%{transform:translateX(250.8px);animation-timing-function:steps(19,end);}29.481%{transform:translateX(0.0px);animation-timing-function:step-end;}100.000%{transform:translateX(0.0px);animation-timing-function:step-end;}}
+@keyframes show0{0%{opacity:1}29.481%{opacity:0}100%{opacity:0}}
+.clip0{transform-origin:64px 0;animation:clip0 13.5s infinite}
+.cursor0{animation:cursor0 13.5s infinite}
+.show0{animation:show0 13.5s infinite step-end}
+@keyframes clip1{0.000%{transform:scaleX(0.0000);animation-timing-function:step-end;}33.333%{transform:scaleX(0.0000);animation-timing-function:steps(30,end);}48.889%{transform:scaleX(1.0000);animation-timing-function:step-end;}60.000%{transform:scaleX(1.0000);animation-timing-function:steps(30,end);}64.444%{transform:scaleX(0.0000);animation-timing-function:step-end;}100.000%{transform:scaleX(0.0000);animation-timing-function:step-end;}}
+@keyframes cursor1{0.000%{transform:translateX(0.0px);animation-timing-function:step-end;}33.333%{transform:translateX(0.0px);animation-timing-function:steps(30,end);}48.889%{transform:translateX(396.0px);animation-timing-function:step-end;}60.000%{transform:translateX(396.0px);animation-timing-function:steps(30,end);}64.444%{transform:translateX(0.0px);animation-timing-function:step-end;}100.000%{transform:translateX(0.0px);animation-timing-function:step-end;}}
+@keyframes show1{0%{opacity:0}33.333%{opacity:1}64.444%{opacity:0}100%{opacity:0}}
+.clip1{transform-origin:64px 0;animation:clip1 13.5s infinite}
+.cursor1{animation:cursor1 13.5s infinite}
+.show1{animation:show1 13.5s infinite step-end}
+@keyframes clip2{0.000%{transform:scaleX(0.0000);animation-timing-function:step-end;}66.667%{transform:scaleX(0.0000);animation-timing-function:steps(33,end);}83.778%{transform:scaleX(1.0000);animation-timing-function:step-end;}93.333%{transform:scaleX(1.0000);animation-timing-function:steps(33,end);}98.222%{transform:scaleX(0.0000);animation-timing-function:step-end;}100.000%{transform:scaleX(0.0000);animation-timing-function:step-end;}}
+@keyframes cursor2{0.000%{transform:translateX(0.0px);animation-timing-function:step-end;}66.667%{transform:translateX(0.0px);animation-timing-function:steps(33,end);}83.778%{transform:translateX(435.6px);animation-timing-function:step-end;}93.333%{transform:translateX(435.6px);animation-timing-function:steps(33,end);}98.222%{transform:translateX(0.0px);animation-timing-function:step-end;}100.000%{transform:translateX(0.0px);animation-timing-function:step-end;}}
+@keyframes show2{0%{opacity:0}66.667%{opacity:1}98.222%{opacity:0}100%{opacity:0}}
+.clip2{transform-origin:64px 0;animation:clip2 13.5s infinite}
+.cursor2{animation:cursor2 13.5s infinite}
+.show2{animation:show2 13.5s infinite step-end}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.show1,.show2{opacity:0}}
+</style>
+<rect width="760" height="132" rx="14" fill="#0d1117"/>
+<rect x=".5" y=".5" width="759" height="131" rx="13.5" fill="none" stroke="#30363d"/>
+<circle cx="26" cy="26" r="6" fill="#ff5f57"/><circle cx="46" cy="26" r="6" fill="#febc2e"/><circle cx="66" cy="26" r="6" fill="#28c840"/>
+<text x="34" y="92" class="prompt">&gt;</text>
+<clipPath id="reveal0"><rect class="clip0" x="64" y="62" width="250.8" height="44"/></clipPath><g class="show0"><text x="732" y="40" text-anchor="end" class="tag">python</text><text x="64" y="92" textLength="250.8" lengthAdjust="spacingAndGlyphs" clip-path="url(#reveal0)"><tspan fill="#d2a8ff">print</tspan><tspan fill="#e6edf3">(</tspan><tspan fill="#a5d6ff">&quot;Bienvenido&quot;</tspan><tspan fill="#e6edf3">)</tspan></text><g class="cursor0"><rect class="blink" x="66" y="71" width="11" height="26" fill="#58a6ff"/></g></g>
+<clipPath id="reveal1"><rect class="clip1" x="64" y="62" width="396.0" height="44"/></clipPath><g class="show1"><text x="732" y="40" text-anchor="end" class="tag">java</text><text x="64" y="92" textLength="396.0" lengthAdjust="spacingAndGlyphs" clip-path="url(#reveal1)"><tspan fill="#d2a8ff">System.out.println</tspan><tspan fill="#e6edf3">(</tspan><tspan fill="#a5d6ff">&quot;Welcome&quot;</tspan><tspan fill="#e6edf3">);</tspan></text><g class="cursor1"><rect class="blink" x="66" y="71" width="11" height="26" fill="#58a6ff"/></g></g>
+<clipPath id="reveal2"><rect class="clip2" x="64" y="62" width="435.6" height="44"/></clipPath><g class="show2"><text x="732" y="40" text-anchor="end" class="tag">javascript</text><text x="64" y="92" textLength="435.6" lengthAdjust="spacingAndGlyphs" clip-path="url(#reveal2)"><tspan fill="#d2a8ff">console.log</tspan><tspan fill="#e6edf3">(</tspan><tspan fill="#a5d6ff">&quot;Hola, soy Luciano&quot;</tspan><tspan fill="#e6edf3">);</tspan></text><g class="cursor2"><rect class="blink" x="66" y="71" width="11" height="26" fill="#58a6ff"/></g></g>
+</svg>
