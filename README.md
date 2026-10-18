@@ -29,7 +29,7 @@ Mi tienda de periféricos gaming en Chile. Programé el tema entero: catálogo, 
 
 <img src="assets/constellation.svg" width="100%" alt="Mapa estelar de mi stack, con una constelación por proyecto">
 
-Cada constelación es un proyecto y las estrellas compartidas son lo que uso en más de uno. También sale de un script: [`scripts/constellation.py`](scripts/constellation.py).
+Cada constelación es un lenguaje y sus estrellas son lo que uso con él. Las estrellas sueltas son otros lenguajes que manejo. También sale de un script: [`scripts/constellation.py`](scripts/constellation.py).
 
 **Lenguajes**
 

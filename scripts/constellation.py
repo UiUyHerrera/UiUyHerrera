@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Render assets/constellation.svg: my stack drawn as a star chart.
 
-Each project is a constellation and each star is a tool it uses. Tools shared by
-more than one project are where the constellations meet.
+Each constellation is a language and its stars are the tools I use with it.
+Tools that belong to two of them are where the constellations meet, and the
+lone named stars are languages I use without a stack worth drawing.
 
     python scripts/constellation.py
 """
@@ -21,39 +22,43 @@ FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monosp
 
 # key: (label, x, y, size, label side)
 STARS = {
-    "ts": ("typescript", 90, 84, 2.4, "t"),
-    "node": ("node.js", 190, 176, 3.2, "l"),
-    "express": ("express", 300, 112, 2.2, "t"),
-    "prisma": ("prisma", 296, 258, 2.0, "r"),
-    "vitest": ("vitest", 140, 306, 1.6, "b"),
-    "docker": ("docker", 410, 340, 1.8, "b"),
-    "postgres": ("postgresql", 580, 312, 2.8, "b"),
-    "figma": ("figma", 430, 52, 1.8, "l"),
-    "js": ("javascript", 560, 150, 3.0, "b"),
-    "luau": ("luau", 690, 64, 2.2, "t"),
-    "python": ("python", 900, 210, 3.4, "l"),
-    "ytdlp": ("yt-dlp", 1040, 150, 1.8, "r"),
-    "ffmpeg": ("ffmpeg", 1110, 232, 1.8, "b"),
-    "flask": ("flask", 990, 318, 2.2, "r"),
-    "sqlalchemy": ("sqlalchemy", 790, 318, 1.8, "b"),
-    "pytest": ("pytest", 1110, 360, 1.8, "r"),
+    # TypeScript
+    "zod": ("zod", 70, 176, 1.8, "l"),
+    "express": ("express", 160, 92, 2.2, "t"),
+    "node": ("node.js", 300, 156, 3.2, "b"),
+    "prisma": ("prisma", 200, 246, 2.2, "r"),
+    "vitest": ("vitest", 92, 318, 1.8, "b"),
+    # JavaScript
+    "figma": ("figma api", 450, 74, 2.0, "t"),
+    "webext": ("webextensions", 612, 128, 2.2, "b"),
+    # SQL
+    "sqlite": ("sqlite", 418, 340, 1.8, "b"),
+    "postgres": ("postgresql", 548, 296, 2.8, "t"),
+    "mysql": ("mysql", 672, 344, 2.0, "b"),
+    # Python
+    "ytdlp": ("yt-dlp", 826, 112, 1.8, "t"),
+    "tkinter": ("tkinter", 966, 86, 2.0, "t"),
+    "psutil": ("psutil", 1106, 150, 1.8, "r"),
+    "pytest": ("pytest", 1074, 288, 2.0, "r"),
+    "flask": ("flask", 930, 236, 2.4, "b"),
+    "sqlalchemy": ("sqlalchemy", 776, 252, 2.0, "b"),
 }
 
 EDGES = [
-    ("ts", "node"), ("node", "express"), ("node", "prisma"), ("prisma", "postgres"),
-    ("node", "vitest"), ("docker", "postgres"), ("docker", "node"),
-    ("figma", "js"), ("js", "luau"), ("node", "js"),
-    ("js", "python"),        # mpeasy: the extension talks to a local Python host
-    ("python", "ytdlp"), ("python", "ffmpeg"),
-    ("python", "flask"), ("flask", "sqlalchemy"), ("sqlalchemy", "postgres"), ("flask", "pytest"),
+    ("zod", "express"), ("express", "node"), ("node", "prisma"), ("prisma", "vitest"),
+    ("node", "figma"), ("figma", "webext"),
+    ("sqlite", "postgres"), ("postgres", "mysql"),
+    ("ytdlp", "tkinter"), ("tkinter", "psutil"), ("psutil", "pytest"), ("pytest", "flask"), ("flask", "sqlalchemy"),
+    # Where the constellations touch.
+    ("prisma", "postgres"), ("sqlalchemy", "postgres"),
+    ("webext", "ytdlp"),  # a browser extension that hands the download to a local Python program
 ]
 
-NAMES = [
-    ("ecommerce-rest-api", 40, 384),
-    ("figmatoroblox", 500, 30),
-    ("mpeasy", 700, 196),
-    ("reservini", 860, 390),
-]
+# Constellation names, written where each one sits on the chart.
+NAMES = [("TYPESCRIPT", 40, 40), ("JAVASCRIPT", 500, 28), ("SQL", 530, 390), ("PYTHON", 1080, 36)]
+
+# Languages drawn as single named stars.
+LONE = [("JAVA", 300, 360), ("C#", 380, 210), ("C++", 720, 40), ("LUAU", 690, 210), ("PHP", 1000, 370)]
 
 OFFSETS = {"t": (0, -14, "middle"), "b": (0, 22, "middle"), "l": (-12, 4, "end"), "r": (12, 4, "start")}
 
@@ -92,17 +97,24 @@ def edges(rng: random.Random) -> str:
             f'<g stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none">{"".join(pulses)}</g>')
 
 
+def star(rng: random.Random, x: float, y: float, size: float) -> str:
+    return (
+        f'<circle class="tw" cx="{x}" cy="{y}" r="{num(size * 5)}" fill="url(#halo)" '
+        f'style="animation-duration:{num(rng.uniform(3, 6))}s;animation-delay:-{num(rng.uniform(0, 6))}s"/>'
+        f'<circle cx="{x}" cy="{y}" r="{num(size)}" fill="#fff"/>'
+    )
+
+
 def stars(rng: random.Random) -> str:
     out = []
     for label, x, y, size, side in STARS.values():
         dx, dy, anchor = OFFSETS[side]
-        out.append(
-            f'<circle class="tw" cx="{x}" cy="{y}" r="{num(size * 5)}" fill="url(#halo)" '
-            f'style="animation-duration:{num(rng.uniform(3, 6))}s;animation-delay:-{num(rng.uniform(0, 6))}s"/>'
-            f'<circle cx="{x}" cy="{y}" r="{num(size)}" fill="#fff"/>'
-            f'<text x="{x + dx}" y="{y + dy}" text-anchor="{anchor}">{label}</text>'
-        )
+        out.append(star(rng, x, y, size) + f'<text x="{x + dx}" y="{y + dy}" text-anchor="{anchor}">{label}</text>')
     return "".join(out)
+
+
+def lone_stars(rng: random.Random) -> str:
+    return "".join(star(rng, x, y, 2.0) + f'<text x="{x + 12}" y="{y + 4}">{name}</text>' for name, x, y in LONE)
 
 
 def render() -> str:
@@ -110,7 +122,7 @@ def render() -> str:
     names = "".join(f'<text x="{x}" y="{y}">{name}</text>' for name, x, y in NAMES)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
-<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; Figma, JavaScript, Node.js y Luau en FigmaToRoblox; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
+<desc id="desc">Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. Estrellas sueltas: Java, C#, C++, Luau y PHP.</desc>
 <style>
 .p{{animation:pulse linear infinite}}
 @keyframes pulse{{to{{stroke-dashoffset:-200}}}}
@@ -128,7 +140,8 @@ def render() -> str:
 <g fill="#fff">{sky(rng)}</g>
 {edges(rng)}
 <g font-family="{FONT}" font-size="15" fill="#d6d6d6">{stars(rng)}</g>
-<g font-family="{FONT}" font-size="11" letter-spacing="3" fill="#8a8a8a">{names}</g>
+<g font-family="{FONT}" font-size="12" letter-spacing="3" fill="#c4c4c4">{lone_stars(rng)}</g>
+<g font-family="{FONT}" font-size="14" letter-spacing="4" fill="#b4b4b4">{names}</g>
 </g>
 </svg>
 """
