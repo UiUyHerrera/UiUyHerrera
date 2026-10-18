@@ -31,7 +31,6 @@ STARS = {
     "figma": ("figma", 430, 52, 1.8, "l"),
     "js": ("javascript", 560, 150, 3.0, "b"),
     "luau": ("luau", 690, 64, 2.2, "t"),
-    "studio": ("roblox studio", 800, 118, 1.8, "r"),
     "python": ("python", 900, 210, 3.4, "l"),
     "ytdlp": ("yt-dlp", 1040, 150, 1.8, "r"),
     "ffmpeg": ("ffmpeg", 1110, 232, 1.8, "b"),
@@ -43,7 +42,7 @@ STARS = {
 EDGES = [
     ("ts", "node"), ("node", "express"), ("node", "prisma"), ("prisma", "postgres"),
     ("node", "vitest"), ("docker", "postgres"), ("docker", "node"),
-    ("figma", "js"), ("js", "luau"), ("luau", "studio"), ("node", "js"),
+    ("figma", "js"), ("js", "luau"), ("node", "js"),
     ("js", "python"),        # mpeasy: the extension talks to a local Python host
     ("python", "ytdlp"), ("python", "ffmpeg"),
     ("python", "flask"), ("flask", "sqlalchemy"), ("sqlalchemy", "postgres"), ("flask", "pytest"),
@@ -111,7 +110,7 @@ def render() -> str:
     names = "".join(f'<text x="{x}" y="{y}">{name}</text>' for name, x, y in NAMES)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
-<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; Figma, JavaScript, Node.js, Luau y Roblox Studio en FigmaToRoblox; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
+<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; Figma, JavaScript, Node.js y Luau en FigmaToRoblox; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
 <style>
 .p{{animation:pulse linear infinite}}
 @keyframes pulse{{to{{stroke-dashoffset:-200}}}}

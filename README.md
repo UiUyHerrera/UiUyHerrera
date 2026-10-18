@@ -31,14 +31,21 @@ Mi tienda de periféricos gaming en Chile. Programé el tema entero: catálogo, 
 
 Cada constelación es un proyecto y las estrellas compartidas son lo que uso en más de uno. También sale de un script: [`scripts/constellation.py`](scripts/constellation.py).
 
-| Área | Qué uso |
-|---|---|
-| Lenguajes | TypeScript, JavaScript, Python, Java, C++, C#, PHP, Luau, HTML, CSS |
-| Backend | Node.js, Express, Flask, APIs REST, JWT, Prisma, SQLAlchemy |
-| Bases de datos | PostgreSQL, MySQL, SQLite |
-| Frontend | HTML, CSS y JavaScript sin frameworks, plantillas Jinja, Liquid para Shopify |
-| Tests | Vitest, Supertest, pytest |
-| Herramientas | Git, GitHub Actions, Docker, npm, Vercel, Figma, Roblox Studio |
+**Lenguajes**
+
+<img src="https://skillicons.dev/icons?i=ts,js,py,java,cpp,cs,php,lua&theme=dark" alt="TypeScript, JavaScript, Python, Java, C++, C#, PHP y Lua">
+
+**Marcado y estilos**
+
+<img src="https://skillicons.dev/icons?i=html,css&theme=dark" alt="HTML y CSS">
+
+**Backend y bases de datos**
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,flask,prisma,postgres,mysql,sqlite&theme=dark" alt="Node.js, Express, Flask, Prisma, PostgreSQL, MySQL y SQLite">
+
+**Herramientas**
+
+<img src="https://skillicons.dev/icons?i=git,github,githubactions,docker,vitest,npm,vercel,figma&theme=dark" alt="Git, GitHub, GitHub Actions, Docker, Vitest, npm, Vercel y Figma">
 
 ---
 
