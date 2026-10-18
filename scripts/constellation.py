@@ -2,8 +2,7 @@
 """Render assets/constellation.svg: my stack drawn as a star chart.
 
 Each constellation is a language and its stars are the tools I use with it.
-Tools that belong to two of them are where the constellations meet, and the
-lone named stars are languages I use without a stack worth drawing.
+Tools that belong to two of them are where the constellations meet.
 
     python scripts/constellation.py
 """
@@ -42,6 +41,12 @@ STARS = {
     "pytest": ("pytest", 1074, 288, 2.0, "r"),
     "flask": ("flask", 930, 236, 2.4, "b"),
     "sqlalchemy": ("sqlalchemy", 776, 252, 2.0, "b"),
+    # More languages, hooked to the tools they meet in my projects
+    "java": ("java", 300, 360, 2.0, "r"),
+    "csharp": ("c#", 380, 210, 2.0, "r"),
+    "cpp": ("c++", 720, 40, 2.0, "r"),
+    "luau": ("luau", 690, 210, 2.2, "r"),
+    "php": ("php", 1000, 370, 2.0, "r"),
 }
 
 EDGES = [
@@ -52,13 +57,13 @@ EDGES = [
     # Where the constellations touch.
     ("prisma", "postgres"), ("sqlalchemy", "postgres"),
     ("webext", "ytdlp"),  # a browser extension that hands the download to a local Python program
+    ("figma", "luau"),    # the Figma plugin feeds the Studio plugin
+    ("php", "mysql"), ("java", "sqlite"), ("csharp", "node"), ("cpp", "webext"),
 ]
 
 # Constellation names, written where each one sits on the chart.
 NAMES = [("TYPESCRIPT", 40, 40), ("JAVASCRIPT", 500, 28), ("SQL", 530, 390), ("PYTHON", 1080, 36)]
 
-# Languages drawn as single named stars.
-LONE = [("JAVA", 300, 360), ("C#", 380, 210), ("C++", 720, 40), ("LUAU", 690, 210), ("PHP", 1000, 370)]
 
 OFFSETS = {"t": (0, -14, "middle"), "b": (0, 22, "middle"), "l": (-12, 4, "end"), "r": (12, 4, "start")}
 
@@ -113,16 +118,13 @@ def stars(rng: random.Random) -> str:
     return "".join(out)
 
 
-def lone_stars(rng: random.Random) -> str:
-    return "".join(star(rng, x, y, 2.0) + f'<text x="{x + 12}" y="{y + 4}">{name}</text>' for name, x, y in LONE)
-
 
 def render() -> str:
     rng = random.Random(SEED)
     names = "".join(f'<text x="{x}" y="{y}">{name}</text>' for name, x, y in NAMES)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
-<desc id="desc">Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. Estrellas sueltas: Java, C#, C++, Luau y PHP.</desc>
+<desc id="desc">Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. También Java, C#, C++, Luau y PHP, conectados a las herramientas con las que se cruzan.</desc>
 <style>
 .p{{animation:pulse linear infinite}}
 @keyframes pulse{{to{{stroke-dashoffset:-200}}}}
@@ -140,7 +142,6 @@ def render() -> str:
 <g fill="#fff">{sky(rng)}</g>
 {edges(rng)}
 <g font-family="{FONT}" font-size="15" fill="#d6d6d6">{stars(rng)}</g>
-<g font-family="{FONT}" font-size="12" letter-spacing="3" fill="#c4c4c4">{lone_stars(rng)}</g>
 <g font-family="{FONT}" font-size="14" letter-spacing="4" fill="#b4b4b4">{names}</g>
 </g>
 </svg>
