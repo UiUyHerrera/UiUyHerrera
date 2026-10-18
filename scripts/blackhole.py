@@ -16,7 +16,7 @@ from pathlib import Path
 WIDTH, HEIGHT = 1200, 420
 CX, CY = 600.0, 210.0
 TILT = -9.0              # disk tilt on screen, in degrees
-SHADOW = 80.0            # radius of the shadow
+SHADOW = 62.0            # radius of the shadow
 EINSTEIN = SHADOW * 1.9  # lens strength used to bend the stars
 ASPECT = 0.085           # ry / rx of the disk, seen almost edge-on
 SEED = 1977
@@ -55,7 +55,7 @@ def orbit(rng: random.Random, d: str, width: float, opacity: float, density: flo
 
 
 def disk_rings(rng: random.Random) -> list[str]:
-    inner, outer, count = SHADOW * 1.35, SHADOW * 7.0, 64
+    inner, outer, count = SHADOW * 1.3, SHADOW * 6.2, 64
     rings = []
     for i in range(count):
         r = inner + (outer - inner) * (i / (count - 1)) ** 1.7
@@ -66,7 +66,7 @@ def disk_rings(rng: random.Random) -> list[str]:
             # and the disk reads as gas, not as Saturn.
             loop_path(r, r * ASPECT * rng.uniform(0.7, 1.35)),
             width=rng.uniform(0.4, 1.0) + 2.0 * glow * rng.random(),
-            opacity=0.1 + 0.85 * glow * rng.uniform(0.6, 1.0),
+            opacity=0.12 + 0.88 * glow * rng.uniform(0.7, 1.0),
             density=min(1.0, 0.25 + glow),
             # Kepler: the period grows with r^1.5, so the inner edge outruns the rest.
             period=6.0 * (r / inner) ** 1.5,
@@ -78,7 +78,7 @@ def disk_rings(rng: random.Random) -> list[str]:
 def halo_rings(rng: random.Random) -> list[str]:
     # The far side of the disk, bent over and under the shadow by the lens.
     # Outer rings drift upward, which makes the arc thicker on top, like in Interstellar.
-    inner, outer, count = SHADOW * 1.03, SHADOW * 1.9, 40
+    inner, outer, count = SHADOW * 1.02, SHADOW * 1.6, 44
     rings = []
     for i in range(count):
         r = inner + (outer - inner) * i / (count - 1)
@@ -86,15 +86,15 @@ def halo_rings(rng: random.Random) -> list[str]:
         rings.append(orbit(
             rng,
             loop_path(r, r, -(r - SHADOW) * 0.45),
-            width=rng.uniform(0.5, 1.5),
-            opacity=0.08 + 0.85 * fade * rng.uniform(0.7, 1.0),
+            width=rng.uniform(0.6, 1.8),
+            opacity=0.12 + 0.88 * fade * rng.uniform(0.7, 1.0),
             density=rng.uniform(0.6, 1.0),
             period=4.0 * (r / SHADOW) ** 1.5,
         ))
-    for r in (SHADOW * 1.12, SHADOW * 1.3, SHADOW * 1.55):
+    for r in (SHADOW * 1.08, SHADOW * 1.22, SHADOW * 1.4):
         # Wide, faint strokes underneath: the bloom that smooths the arc.
         rings.append(orbit(rng, loop_path(r, r, -(r - SHADOW) * 0.45), width=rng.uniform(6, 10),
-                           opacity=rng.uniform(0.05, 0.09), density=1.0, period=4.0 * (r / SHADOW) ** 1.5))
+                           opacity=rng.uniform(0.1, 0.16), density=1.0, period=4.0 * (r / SHADOW) ** 1.5))
     return rings
 
 
@@ -172,60 +172,69 @@ def bright_stars(rng: random.Random) -> list[str]:
     return glows
 
 
-def render() -> str:
+def parts() -> tuple[str, str, str]:
+    """The scene as (css, defs, body), so profile.py can place it inside a taller SVG."""
     rng = random.Random(SEED)
     stars = lensed_stars(rng)
     glows = bright_stars(rng)
     disk = "".join(disk_rings(rng) + hot_spots(rng))
     halo = "".join(halo_rings(rng))
-    reach = SHADOW * 7.2
+    reach = SHADOW * 6.4
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
-<title id="title">Agujero negro</title>
-<desc id="desc">Agujero negro animado: disco de acreción girando, anillo de fotones y estrellas deformadas por la lente gravitacional.</desc>
-<style>
-.o{{animation:orbit linear infinite}}
-@keyframes orbit{{to{{stroke-dashoffset:-1000}}}}
-.tw{{animation:twinkle ease-in-out infinite}}
-@keyframes twinkle{{50%{{opacity:.12}}}}
-@media (prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
-</style>
-<defs>
-<clipPath id="frame"><rect width="{WIDTH}" height="{HEIGHT}" rx="16"/></clipPath>
-<clipPath id="back"><rect x="{num(-reach)}" y="{num(-reach)}" width="{num(reach * 2)}" height="{num(reach + 0.5)}"/></clipPath>
+    css = """.o{animation:orbit linear infinite}
+@keyframes orbit{to{stroke-dashoffset:-1000}}
+.tw{animation:twinkle ease-in-out infinite}
+@keyframes twinkle{50%{opacity:.12}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}"""
+    defs = f"""<clipPath id="back"><rect x="{num(-reach)}" y="{num(-reach)}" width="{num(reach * 2)}" height="{num(reach + 0.5)}"/></clipPath>
 <clipPath id="front"><rect x="{num(-reach)}" y="-0.5" width="{num(reach * 2)}" height="{num(reach)}"/></clipPath>
 <linearGradient id="doppler" gradientUnits="userSpaceOnUse" x1="{num(-reach)}" y1="0" x2="{num(reach)}" y2="0">
-<stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#e4e4e4"/><stop offset="1" stop-color="#6c6c6c"/>
+<stop offset="0" stop-color="#fff"/><stop offset=".4" stop-color="#ececec"/><stop offset="1" stop-color="#505050"/>
 </linearGradient>
-<radialGradient id="haze" cx="{num(CX / WIDTH)}" cy="{num(CY / HEIGHT)}" r=".6">
-<stop offset="0" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+<radialGradient id="haze" gradientUnits="userSpaceOnUse" cx="{num(CX)}" cy="{num(CY)}" r="{num(WIDTH * 0.5)}">
+<stop offset="0" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="{num(SHADOW * 2.5)}">
-<stop offset=".4" stop-color="#fff" stop-opacity="0"/><stop offset=".42" stop-color="#fff" stop-opacity=".26"/>
-<stop offset=".56" stop-color="#fff" stop-opacity=".09"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+<radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="{num(SHADOW * 2.2)}">
+<stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset=".47" stop-color="#fff" stop-opacity=".55"/>
+<stop offset=".58" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </radialGradient>
 <radialGradient id="flare">
-<stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".35" stop-color="#fff" stop-opacity=".07"/>
+<stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".25" stop-color="#fff" stop-opacity=".08"/>
 <stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </radialGradient>
 <radialGradient id="star">
 <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
-</radialGradient>
-</defs>
-<g clip-path="url(#frame)">
-<rect width="{WIDTH}" height="{HEIGHT}" fill="#000"/>
-<rect width="{WIDTH}" height="{HEIGHT}" fill="url(#haze)"/>
+</radialGradient>"""
+    body = f"""<rect width="{WIDTH}" height="{HEIGHT}" fill="url(#haze)"/>
 <g fill="#fff">{"".join(stars)}{"".join(glows)}</g>
 <g transform="translate({num(CX)} {num(CY)}) rotate({num(TILT)})">
-<ellipse rx="{num(reach * 1.05)}" ry="{num(SHADOW * 0.95)}" fill="url(#flare)"/>
-<circle r="{num(SHADOW * 2.5)}" fill="url(#glow)"/>
+<ellipse rx="{num(reach * 0.8)}" ry="{num(SHADOW * 0.7)}" fill="url(#flare)"/>
+<circle r="{num(SHADOW * 2.2)}" fill="url(#glow)"/>
 <g fill="none" stroke="url(#doppler)" clip-path="url(#back)">{disk}</g>
 <g fill="none" stroke="url(#doppler)">{halo}</g>
 <circle r="{num(SHADOW)}" fill="#000"/>
-<circle r="{num(SHADOW + 2)}" fill="none" stroke="#fff" stroke-width="6" stroke-opacity=".1"/>
-<circle r="{num(SHADOW + 0.8)}" fill="none" stroke="#fff" stroke-width="1.3" stroke-opacity=".9"/>
-<g fill="none" stroke="url(#doppler)" clip-path="url(#front)">{disk}<path d="{loop_path(SHADOW * 1.7, SHADOW * 1.7 * ASPECT)}" stroke-width="9" stroke-opacity=".09"/></g>
-</g>
+<circle r="{num(SHADOW + 3)}" fill="none" stroke="#fff" stroke-width="10" stroke-opacity=".2"/>
+<circle r="{num(SHADOW + 1)}" fill="none" stroke="#fff" stroke-width="2.2" stroke-opacity="1"/>
+<g fill="none" stroke="url(#doppler)" clip-path="url(#front)">{disk}<path d="{loop_path(SHADOW * 1.6, SHADOW * 1.6 * ASPECT)}" stroke-width="7" stroke-opacity=".22"/></g>
+</g>"""
+    return css, defs, body
+
+
+def render() -> str:
+    css, defs, body = parts()
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
+<title id="title">Agujero negro</title>
+<desc id="desc">Agujero negro animado: disco de acreción girando, anillo de fotones y estrellas deformadas por la lente gravitacional.</desc>
+<style>
+{css}
+</style>
+<defs>
+<clipPath id="frame"><rect width="{WIDTH}" height="{HEIGHT}" rx="16"/></clipPath>
+{defs}
+</defs>
+<g clip-path="url(#frame)">
+<rect width="{WIDTH}" height="{HEIGHT}" fill="#000"/>
+{body}
 </g>
 </svg>
 """

@@ -18,5 +18,6 @@ jobs:
         run: |
           python scripts/blackhole.py
           python scripts/constellation.py
+          python scripts/profile.py
       - name: Fail if they differ from the committed ones
         run: git diff --exit-code -- assets

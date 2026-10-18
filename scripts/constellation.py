@@ -72,6 +72,8 @@ EDGES = [
 
 
 
+DESC = "Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. También Java, C#, C++, Luau y PHP, conectados a las herramientas con las que se cruzan."
+
 OFFSETS = {"t": (0, -14, "middle"), "b": (0, 22, "middle"), "l": (-12, 4, "end"), "r": (12, 4, "start")}
 
 
@@ -111,7 +113,7 @@ def edges(rng: random.Random) -> str:
 
 def star(rng: random.Random, x: float, y: float, size: float) -> str:
     return (
-        f'<circle class="tw" cx="{x}" cy="{y}" r="{num(size * 5)}" fill="url(#halo)" '
+        f'<circle class="gl" cx="{x}" cy="{y}" r="{num(size * 5)}" fill="url(#chalo)" '
         f'style="animation-duration:{num(rng.uniform(3, 6))}s;animation-delay:-{num(rng.uniform(0, 6))}s"/>'
         f'<circle cx="{x}" cy="{y}" r="{num(size)}" fill="#fff"/>'
     )
@@ -126,28 +128,40 @@ def stars(rng: random.Random) -> str:
 
 
 
-def render() -> str:
+def parts(background: bool = True) -> tuple[str, str, str]:
+    """The chart as (css, defs, body), so profile.py can place it inside a taller SVG."""
     rng = random.Random(SEED)
+    css = """.p{animation:pulse linear infinite}
+@keyframes pulse{to{stroke-dashoffset:-200}}
+.gl{animation:glint ease-in-out infinite}
+@keyframes glint{50%{opacity:.35}}"""
+    defs = ('<radialGradient id="chalo"><stop offset="0" stop-color="#fff" stop-opacity=".35"/>'
+            '<stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>')
+    sky_dots = sky(rng)
+    back = (f'<g fill="none" stroke="#fff" stroke-opacity=".05" stroke-dasharray="2 6">{grid()}</g>'
+            f'<g fill="#fff">{sky_dots}</g>') if background else ""
+    body = f"""{back}
+{edges(rng)}
+<g font-family="{FONT}" font-size="15" fill="#d6d6d6">{stars(rng)}</g>"""
+    return css, defs, body
+
+
+def render() -> str:
+    css, defs, body = parts()
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
-<desc id="desc">Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. También Java, C#, C++, Luau y PHP, conectados a las herramientas con las que se cruzan.</desc>
+<desc id="desc">{DESC}</desc>
 <style>
-.p{{animation:pulse linear infinite}}
-@keyframes pulse{{to{{stroke-dashoffset:-200}}}}
-.tw{{animation:twinkle ease-in-out infinite}}
-@keyframes twinkle{{50%{{opacity:.35}}}}
+{css}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
 </style>
 <defs>
 <clipPath id="frame"><rect width="{WIDTH}" height="{HEIGHT}" rx="16"/></clipPath>
-<radialGradient id="halo"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+{defs}
 </defs>
 <g clip-path="url(#frame)">
 <rect width="{WIDTH}" height="{HEIGHT}" fill="#000"/>
-<g fill="none" stroke="#fff" stroke-opacity=".05" stroke-dasharray="2 6">{grid()}</g>
-<g fill="#fff">{sky(rng)}</g>
-{edges(rng)}
-<g font-family="{FONT}" font-size="15" fill="#d6d6d6">{stars(rng)}</g>
+{body}
 </g>
 </svg>
 """
