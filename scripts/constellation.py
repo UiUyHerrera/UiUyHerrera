@@ -51,7 +51,7 @@ EDGES = [
 
 NAMES = [
     ("ecommerce-rest-api", 40, 384),
-    ("figbridge", 520, 30),
+    ("figmatoroblox", 500, 30),
     ("mpeasy", 700, 196),
     ("reservini", 860, 390),
 ]
@@ -111,7 +111,7 @@ def render() -> str:
     names = "".join(f'<text x="{x}" y="{y}">{name}</text>' for name, x, y in NAMES)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
-<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; Figma, JavaScript, Node.js, Luau y Roblox Studio en FigBridge; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
+<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; Figma, JavaScript, Node.js, Luau y Roblox Studio en FigmaToRoblox; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
 <style>
 .p{{animation:pulse linear infinite}}
 @keyframes pulse{{to{{stroke-dashoffset:-200}}}}

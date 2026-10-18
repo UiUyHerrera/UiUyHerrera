@@ -10,7 +10,7 @@ El agujero negro de arriba lo dibuja [`scripts/blackhole.py`](scripts/blackhole.
 
 ### Proyectos
 
-**[FigBridge](https://github.com/UiUyHerrera/FigBridge)** · JavaScript, Node.js, Luau\
+**[FigmaToRoblox](https://github.com/UiUyHerrera/FigmaToRoblox)** · JavaScript, Node.js, Luau\
 Puente entre Figma y Roblox Studio. Diseñás una pantalla en Figma, copiás un código de seis letras y en Studio aparece como UI nativa de Roblox, con botones, paneles, pestañas y animaciones. Un servidor local guarda el diseño y sube las imágenes a Roblox por Open Cloud.
 
 **[Reservini](https://github.com/UiUyHerrera/reservini)** · Python, Flask, SQLAlchemy, PostgreSQL\
