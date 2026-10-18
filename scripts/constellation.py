@@ -72,7 +72,7 @@ EDGES = [
 
 
 
-DESC = "Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. También Java, C#, C++, Luau y PHP, conectados a las herramientas con las que se cruzan."
+DESC = "Star chart of my stack, one constellation per language. TypeScript: Node.js, Express, Prisma, Zod and Vitest. JavaScript: Node.js, the Figma plugin API and WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil and yt-dlp. SQL: PostgreSQL, MySQL and SQLite. Java, C#, C++, Luau and PHP are linked to the tools they meet."
 
 OFFSETS = {"t": (0, -14, "middle"), "b": (0, 22, "middle"), "l": (-12, 4, "end"), "r": (12, 4, "start")}
 

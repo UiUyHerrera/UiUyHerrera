@@ -205,7 +205,7 @@ def parts() -> tuple[str, str, str]:
 <radialGradient id="star">
 <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </radialGradient>"""
-    body = f"""<rect width="{WIDTH}" height="{HEIGHT}" fill="url(#haze)"/>
+    body = f"""<rect width="{WIDTH}" height="{HEIGHT * 2}" fill="url(#haze)"/>
 <g fill="#fff">{"".join(stars)}{"".join(glows)}</g>
 <g transform="translate({num(CX)} {num(CY)}) rotate({num(TILT)})">
 <ellipse rx="{num(reach * 0.8)}" ry="{num(SHADOW * 0.7)}" fill="url(#flare)"/>
@@ -223,8 +223,8 @@ def parts() -> tuple[str, str, str]:
 def render() -> str:
     css, defs, body = parts()
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
-<title id="title">Agujero negro</title>
-<desc id="desc">Agujero negro animado: disco de acreción girando, anillo de fotones y estrellas deformadas por la lente gravitacional.</desc>
+<title id="title">Black hole</title>
+<desc id="desc">Animated black hole: a spinning accretion disk, the photon ring and stars bent by gravitational lensing.</desc>
 <style>
 {css}
 </style>

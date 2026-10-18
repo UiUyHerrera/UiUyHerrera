@@ -1,72 +1,42 @@
 #!/usr/bin/env python3
-"""Render assets/profile.svg: the whole profile as one tall image over a galaxy.
+"""Render assets/profile.svg: the black hole and my introduction over a galaxy.
 
-GitHub doesn't let a README set a background, so the black hole, the text, the
-projects and the stack are drawn into a single SVG with one continuous sky.
-The README keeps the links underneath, because nothing inside an image is
-clickable.
+GitHub doesn't let a README set a background, so the header is one SVG with a
+continuous sky behind the black hole, my name and the intro text.
 
     python scripts/profile.py
 """
 
 from __future__ import annotations
 
-import base64
 import html
 import math
 import random
 from pathlib import Path
 
 import blackhole
-import constellation
+import constellation  # noqa: F401  (shares the font)
 from blackhole import num
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "profile.svg"
-ICONS = ROOT / "assets" / "icons"
 WIDTH = 1200
 MARGIN = 96
 FONT = constellation.FONT
 CHAR = 0.6  # width of a monospace character, in ems; used to wrap text by hand
 SEED = 2026
 
+NAME = "Luciano Herrera"
+ROLE = "Junior full stack developer  ·  Canelones, Uruguay"
+
 INTRO = [
-    "Soy Luciano, de Canelones. Estudio Ingeniería en Computación en la FING y antes hice el Bachillerato "
-    "en Informática de UTU. Me tira más el backend que el frontend: APIs en Node con TypeScript y PostgreSQL, "
-    "y apps web en Python con Flask. También trabajé en soporte técnico y automatizando reportes.",
-    "Busco mi primer trabajo como desarrollador, en Montevideo, Canelones o remoto.",
-    "El agujero negro de arriba y todo este perfil los dibuja un script en Python puro. Cada anillo del disco "
-    "gira a la velocidad que le toca por la tercera ley de Kepler, y las estrellas pasan por una lente "
-    "gravitacional antes de dibujarse.",
+    "I study Computer Engineering at FING (Universidad de la República), and before that I finished the IT "
+    "track at UTU. I lean towards the backend: APIs in Node with TypeScript and PostgreSQL, and web apps in "
+    "Python with Flask. I've also worked in tech support and on automating reports.",
+    "I'm looking for my first developer job, in Montevideo, Canelones or remote.",
+    "The black hole above is drawn by a plain Python script. Each ring of the disk spins at the speed "
+    "Kepler's third law gives it, and the stars go through a gravitational lens before they're drawn.",
 ]
-
-PROJECTS = [
-    ("FigmaToRoblox", "JavaScript · Node.js · Luau",
-     "Puente entre Figma y Roblox Studio. Diseñás una pantalla en Figma, copiás un código de seis letras y en "
-     "Studio aparece como UI nativa de Roblox, con botones, paneles, pestañas y animaciones."),
-    ("Reservini", "Python · Flask · SQLAlchemy · PostgreSQL",
-     "Reservas para negocios chicos. El dueño carga sus servicios y horarios, comparte un link y los clientes "
-     "reservan solos. No deja tomar dos veces la misma hora, manda confirmación y recordatorio por mail, y los "
-     "tests corren en GitHub Actions."),
-    ("ecommerce-rest-api", "TypeScript · Express · Prisma · PostgreSQL",
-     "API de una tienda: registro con JWT, roles, productos con stock y pedidos que se arman dentro de una "
-     "transacción, sin vender dos veces la última unidad. Documentada con OpenAPI y probada contra PostgreSQL."),
-    ("mpeasy", "JavaScript · Python",
-     "Extensión de navegador para bajar audio y video. Le pasa cada pedido por native messaging a un programa "
-     "local en Python que usa yt-dlp y ffmpeg, y cada versión sale sola como release."),
-    ("AimGearZ", "Shopify · Liquid",
-     "Mi tienda de periféricos gaming en Chile. Programé el tema entero: catálogo, buscador, carrito y las "
-     "secciones propias."),
-]
-
-STACK = [
-    ("Frontend", ["html", "css", "js", "ts"]),
-    ("Backend", ["ts", "py", "java", "cs", "php", "cpp", "lua"]),
-    ("Frameworks y bases de datos", ["nodejs", "express", "flask", "prisma", "postgres", "mysql", "sqlite"]),
-    ("Herramientas", ["git", "github", "githubactions", "docker", "vitest", "npm", "vercel", "figma"]),
-]
-
-CONTACT = "linkedin.com/in/luciano-herrera-b71212416  ·  bu3luciano@gmail.com  ·  Canelones, Uruguay"
 
 
 def wrap(text: str, size: float, width: float) -> list[str]:
@@ -92,16 +62,6 @@ def paragraph(y: float, value: str, size: float = 17, color: str = "#d4d4d4", le
         out.append(text(MARGIN, y, line, size, color))
         y += size * lead
     return "".join(out), y
-
-
-def heading(y: float, value: str) -> tuple[str, float]:
-    rule = f'<path d="M{MARGIN + len(value) * 15 * CHAR * 1.4 + 18} {num(y - 5)}H{WIDTH - MARGIN}" stroke="#fff" stroke-opacity=".14"/>'
-    return text(MARGIN, y, value.upper(), 15, "#9a9a9a", letter_spacing="6") + rule, y + 44
-
-
-def icon(name: str, x: float, y: float, size: float) -> str:
-    data = base64.b64encode((ICONS / f"{name}.svg").read_bytes()).decode()
-    return f'<image x="{num(x)}" y="{num(y)}" width="{num(size)}" height="{num(size)}" href="data:image/svg+xml;base64,{data}"/>'
 
 
 def galaxy(rng: random.Random, height: float, start: float) -> str:
@@ -138,59 +98,28 @@ def galaxy(rng: random.Random, height: float, start: float) -> str:
 def render() -> str:
     rng = random.Random(SEED)
     bh_css, bh_defs, bh_body = blackhole.parts()
-    st_css, st_defs, st_body = constellation.parts(background=False)
-    body, y = [], blackhole.HEIGHT + 40
-
-    for value in INTRO:
-        block, y = paragraph(y, value)
-        body.append(block)
-        y += 14
-
-    y += 30
-    block, y = heading(y, "Proyectos")
-    body.append(block)
-    for name, tech, about in PROJECTS:
-        body.append(text(MARGIN, y, name, 22, "#ffffff", font_weight="bold"))
-        body.append(text(MARGIN + len(name) * 22 * CHAR + 20, y, tech, 14, "#8a8a8a"))
-        block, y = paragraph(y + 32, about, size=16, color="#bdbdbd")
-        body.append(block)
-        y += 26
-
-    y += 20
-    block, y = heading(y, "Stack")
-    body.append(block)
-    body.append(f'<g transform="translate(0 {num(y - 30)})">{st_body}</g>')
-    y += constellation.HEIGHT - 10
-    block, y = paragraph(y, "Cada constelación es un lenguaje y sus estrellas son lo que uso con él.", size=15, color="#8a8a8a")
-    body.append(block)
-    y += 18
-
-    for label, names in STACK:
-        body.append(text(MARGIN, y, label, 15, "#d4d4d4", font_weight="bold"))
-        y += 16
-        body.append("".join(icon(n, MARGIN + i * 62, y, 52) for i, n in enumerate(names)))
-        y += 52 + 38
-
-    y += 10
-    body.append(f'<path d="M{MARGIN} {num(y)}H{WIDTH - MARGIN}" stroke="#fff" stroke-opacity=".14"/>')
+    body, y = [], blackhole.HEIGHT + 30
+    body.append(text(MARGIN, y, NAME, 46, "#ffffff", font_weight="bold", letter_spacing="1"))
     y += 40
-    body.append(text(WIDTH / 2, y, CONTACT, 14, "#9a9a9a", text_anchor="middle"))
-    height = y + 56
+    body.append(text(MARGIN, y, ROLE, 18, "#a8a8a8", letter_spacing="1"))
+    y += 52
+    for value in INTRO:
+        block, y = paragraph(y, value, size=20, color="#ececec", lead=1.6)
+        body.append(block)
+        y += 16
+    height = y + 30
 
-    summary = " ".join(INTRO) + " Proyectos: " + " ".join(f"{n} ({t}): {a}" for n, t, a in PROJECTS)
+    summary = f"{NAME}. {ROLE}. " + " ".join(INTRO)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {num(height)}" width="{WIDTH}" height="{num(height)}" role="img" aria-labelledby="title desc">
-<title id="title">Luciano Herrera</title>
+<title id="title">{NAME}</title>
 <desc id="desc">{html.escape(summary)}</desc>
 <style>
 {bh_css}
-{st_css}
 </style>
 <defs>
 <clipPath id="frame"><rect width="{WIDTH}" height="{num(height)}" rx="16"/></clipPath>
 <radialGradient id="nebula"><stop offset="0" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000"/></linearGradient>
 {bh_defs}
-{st_defs}
 </defs>
 <g clip-path="url(#frame)">
 <rect width="{WIDTH}" height="{num(height)}" fill="#000"/>
