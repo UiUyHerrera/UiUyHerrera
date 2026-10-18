@@ -31,15 +31,15 @@ Mi tienda de periféricos gaming en Chile. Programé el tema entero: catálogo, 
 
 Cada constelación es un lenguaje y sus estrellas son lo que uso con él. También sale de un script: [`scripts/constellation.py`](scripts/constellation.py).
 
-**Lenguajes**
+**Frontend**
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,java,cpp,cs,php,lua&theme=dark" alt="TypeScript, JavaScript, Python, Java, C++, C#, PHP y Lua">
+<img src="https://skillicons.dev/icons?i=html,css,js,ts&theme=dark" alt="HTML, CSS, JavaScript y TypeScript">
 
-**Marcado y estilos**
+**Backend**
 
-<img src="https://skillicons.dev/icons?i=html,css&theme=dark" alt="HTML y CSS">
+<img src="https://skillicons.dev/icons?i=ts,py,java,cs,php,cpp,lua&theme=dark" alt="TypeScript, Python, Java, C#, PHP, C++ y Lua">
 
-**Backend y bases de datos**
+**Frameworks y bases de datos**
 
 <img src="https://skillicons.dev/icons?i=nodejs,express,flask,prisma,postgres,mysql,sqlite&theme=dark" alt="Node.js, Express, Flask, Prisma, PostgreSQL, MySQL y SQLite">
 
