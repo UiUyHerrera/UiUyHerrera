@@ -16,7 +16,7 @@ from blackhole import num
 
 WIDTH, HEIGHT = 1200, 400
 SEED = 404
-OUT = Path(__file__).resolve().parent.parent / "assets" / "constellation.svg"
+OUT = Path(__file__).resolve().parent.parent / "assets" / "stack-map.svg"
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 
 # key: (label, x, y, size, label side)
