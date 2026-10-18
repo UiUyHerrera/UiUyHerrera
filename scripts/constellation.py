@@ -21,6 +21,11 @@ FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monosp
 
 # key: (label, x, y, size, label side)
 STARS = {
+    # Languages: the bright hubs every tool hangs from
+    "typescript": ("typescript", 56, 38, 3.4, "r"),
+    "javascript": ("javascript", 560, 34, 3.4, "r"),
+    "python": ("python", 1080, 40, 3.4, "l"),
+    "sql": ("sql", 548, 382, 3.4, "r"),
     # TypeScript
     "zod": ("zod", 70, 176, 1.8, "l"),
     "express": ("express", 160, 92, 2.2, "t"),
@@ -50,6 +55,10 @@ STARS = {
 }
 
 EDGES = [
+    ("typescript", "zod"), ("typescript", "express"),
+    ("javascript", "figma"), ("javascript", "webext"), ("javascript", "cpp"),
+    ("python", "tkinter"), ("python", "psutil"),
+    ("sql", "sqlite"), ("sql", "mysql"), ("sql", "postgres"),
     ("zod", "express"), ("express", "node"), ("node", "prisma"), ("prisma", "vitest"),
     ("node", "figma"), ("figma", "webext"),
     ("sqlite", "postgres"), ("postgres", "mysql"),
@@ -61,8 +70,6 @@ EDGES = [
     ("php", "mysql"), ("java", "sqlite"), ("csharp", "node"), ("cpp", "webext"),
 ]
 
-# Constellation names, written where each one sits on the chart.
-NAMES = [("TYPESCRIPT", 40, 40), ("JAVASCRIPT", 500, 28), ("SQL", 530, 390), ("PYTHON", 1080, 36)]
 
 
 OFFSETS = {"t": (0, -14, "middle"), "b": (0, 22, "middle"), "l": (-12, 4, "end"), "r": (12, 4, "start")}
@@ -121,7 +128,6 @@ def stars(rng: random.Random) -> str:
 
 def render() -> str:
     rng = random.Random(SEED)
-    names = "".join(f'<text x="{x}" y="{y}">{name}</text>' for name, x, y in NAMES)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
 <desc id="desc">Mapa estelar de mi stack, con una constelación por lenguaje. TypeScript: Node.js, Express, Prisma, Zod y Vitest. JavaScript: Node.js, la API de plugins de Figma y WebExtensions. Python: Flask, SQLAlchemy, pytest, Tkinter, psutil y yt-dlp. SQL: PostgreSQL, MySQL y SQLite. También Java, C#, C++, Luau y PHP, conectados a las herramientas con las que se cruzan.</desc>
@@ -142,7 +148,6 @@ def render() -> str:
 <g fill="#fff">{sky(rng)}</g>
 {edges(rng)}
 <g font-family="{FONT}" font-size="15" fill="#d6d6d6">{stars(rng)}</g>
-<g font-family="{FONT}" font-size="14" letter-spacing="4" fill="#b4b4b4">{names}</g>
 </g>
 </svg>
 """
