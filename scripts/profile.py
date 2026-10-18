@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render assets/profile.svg: the black hole and my introduction over a galaxy.
+"""Render assets/header.svg: the black hole and my introduction over a galaxy.
 
 GitHub doesn't let a README set a background, so the header is one SVG with a
 continuous sky behind the black hole, my name and the intro text.
@@ -19,7 +19,7 @@ import constellation  # noqa: F401  (shares the font)
 from blackhole import num
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "assets" / "profile.svg"
+OUT = ROOT / "assets" / "header.svg"
 WIDTH = 1200
 MARGIN = 96
 FONT = constellation.FONT

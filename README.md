@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile.svg" width="100%" alt="Luciano Herrera, junior full stack developer from Canelones, Uruguay, over an animated black hole and a galaxy">
+  <img src="assets/header.svg" width="100%" alt="Luciano Herrera, junior full stack developer from Canelones, Uruguay, over an animated black hole and a galaxy">
 </p>
 
 ### Projects
