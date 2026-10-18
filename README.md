@@ -10,6 +10,9 @@ El agujero negro de arriba lo dibuja [`scripts/blackhole.py`](scripts/blackhole.
 
 ### Proyectos
 
+**[FigBridge](https://github.com/UiUyHerrera/FigBridge)** · JavaScript, Node.js, Luau\
+Puente entre Figma y Roblox Studio. Diseñás una pantalla en Figma, copiás un código de seis letras y en Studio aparece como UI nativa de Roblox, con botones, paneles, pestañas y animaciones. Un servidor local guarda el diseño y sube las imágenes a Roblox por Open Cloud.
+
 **[Reservini](https://github.com/UiUyHerrera/reservini)** · Python, Flask, SQLAlchemy, PostgreSQL\
 Reservas para negocios chicos. El dueño carga sus servicios y horarios, comparte un link y los clientes reservan solos. No deja tomar dos veces la misma hora, manda confirmación y recordatorio por mail, y los tests corren en GitHub Actions.
 
@@ -27,6 +30,15 @@ Mi tienda de periféricos gaming en Chile. Programé el tema entero: catálogo, 
 <img src="assets/constellation.svg" width="100%" alt="Mapa estelar de mi stack, con una constelación por proyecto">
 
 Cada constelación es un proyecto y las estrellas compartidas son lo que uso en más de uno. También sale de un script: [`scripts/constellation.py`](scripts/constellation.py).
+
+| Área | Qué uso |
+|---|---|
+| Lenguajes | TypeScript, JavaScript, Python, Java, C++, C#, PHP, Luau, HTML, CSS |
+| Backend | Node.js, Express, Flask, APIs REST, JWT, Prisma, SQLAlchemy |
+| Bases de datos | PostgreSQL, MySQL, SQLite |
+| Frontend | HTML, CSS y JavaScript sin frameworks, plantillas Jinja, Liquid para Shopify |
+| Tests | Vitest, Supertest, pytest |
+| Herramientas | Git, GitHub Actions, Docker, npm, Vercel, Figma, Roblox Studio |
 
 ---
 

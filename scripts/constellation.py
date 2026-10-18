@@ -14,41 +14,46 @@ from pathlib import Path
 
 from blackhole import num
 
-WIDTH, HEIGHT = 1200, 360
+WIDTH, HEIGHT = 1200, 400
 SEED = 404
 OUT = Path(__file__).resolve().parent.parent / "assets" / "constellation.svg"
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 
 # key: (label, x, y, size, label side)
 STARS = {
-    "ts": ("typescript", 100, 90, 2.4, "t"),
-    "node": ("node.js", 200, 170, 3.2, "l"),
-    "express": ("express", 320, 112, 2.2, "t"),
-    "prisma": ("prisma", 318, 240, 2.0, "r"),
-    "vitest": ("vitest", 160, 286, 1.6, "b"),
-    "docker": ("docker", 430, 316, 1.8, "b"),
-    "postgres": ("postgresql", 560, 262, 2.8, "b"),
-    "js": ("javascript", 560, 92, 3.0, "t"),
-    "python": ("python", 860, 140, 3.4, "t"),
-    "ytdlp": ("yt-dlp", 1000, 58, 1.8, "r"),
-    "ffmpeg": ("ffmpeg", 1090, 140, 1.8, "r"),
-    "flask": ("flask", 950, 236, 2.2, "r"),
-    "sqlalchemy": ("sqlalchemy", 760, 244, 1.8, "b"),
-    "pytest": ("pytest", 1050, 304, 1.8, "r"),
+    "ts": ("typescript", 90, 84, 2.4, "t"),
+    "node": ("node.js", 190, 176, 3.2, "l"),
+    "express": ("express", 300, 112, 2.2, "t"),
+    "prisma": ("prisma", 296, 258, 2.0, "r"),
+    "vitest": ("vitest", 140, 306, 1.6, "b"),
+    "docker": ("docker", 410, 340, 1.8, "b"),
+    "postgres": ("postgresql", 580, 312, 2.8, "b"),
+    "figma": ("figma", 430, 52, 1.8, "l"),
+    "js": ("javascript", 560, 150, 3.0, "b"),
+    "luau": ("luau", 690, 64, 2.2, "t"),
+    "studio": ("roblox studio", 800, 118, 1.8, "r"),
+    "python": ("python", 900, 210, 3.4, "l"),
+    "ytdlp": ("yt-dlp", 1040, 150, 1.8, "r"),
+    "ffmpeg": ("ffmpeg", 1110, 232, 1.8, "b"),
+    "flask": ("flask", 990, 318, 2.2, "r"),
+    "sqlalchemy": ("sqlalchemy", 790, 318, 1.8, "b"),
+    "pytest": ("pytest", 1110, 360, 1.8, "r"),
 }
 
 EDGES = [
     ("ts", "node"), ("node", "express"), ("node", "prisma"), ("prisma", "postgres"),
     ("node", "vitest"), ("docker", "postgres"), ("docker", "node"),
+    ("figma", "js"), ("js", "luau"), ("luau", "studio"), ("node", "js"),
     ("js", "python"),        # mpeasy: the extension talks to a local Python host
     ("python", "ytdlp"), ("python", "ffmpeg"),
     ("python", "flask"), ("flask", "sqlalchemy"), ("sqlalchemy", "postgres"), ("flask", "pytest"),
 ]
 
 NAMES = [
-    ("ecommerce-rest-api", 50, 340),
-    ("mpeasy", 676, 100),
-    ("reservini", 840, 336),
+    ("ecommerce-rest-api", 40, 384),
+    ("figbridge", 520, 30),
+    ("mpeasy", 700, 196),
+    ("reservini", 860, 390),
 ]
 
 OFFSETS = {"t": (0, -14, "middle"), "b": (0, 22, "middle"), "l": (-12, 4, "end"), "r": (12, 4, "start")}
@@ -106,7 +111,7 @@ def render() -> str:
     names = "".join(f'<text x="{x}" y="{y}">{name}</text>' for name, x, y in NAMES)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-labelledby="title desc">
 <title id="title">Stack</title>
-<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
+<desc id="desc">Mapa estelar de mi stack. TypeScript, Node.js, Express, Prisma, Vitest y Docker en ecommerce-rest-api; Figma, JavaScript, Node.js, Luau y Roblox Studio en FigBridge; JavaScript, Python, yt-dlp y ffmpeg en mpeasy; Python, Flask, SQLAlchemy y pytest en reservini; PostgreSQL compartido entre los dos backends.</desc>
 <style>
 .p{{animation:pulse linear infinite}}
 @keyframes pulse{{to{{stroke-dashoffset:-200}}}}
